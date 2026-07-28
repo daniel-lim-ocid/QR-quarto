@@ -1,0 +1,49 @@
+name: Render and Deploy Quarto Project
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install Python Dependencies
+        run: |
+          if [ -f quarto_book/requirements.txt ]; then pip install -r quarto_book/requirements.txt; fi
+
+      # 1. Point Quarto to render inside the quarto_book folder
+      - name: Render Quarto Project
+        run: quarto render quarto_book --to html
+
+      # 2. Update the path to target the rendered output inside quarto_book
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: quarto_book/_book/html   # Adjust if your output-dir in _quarto.yml differs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

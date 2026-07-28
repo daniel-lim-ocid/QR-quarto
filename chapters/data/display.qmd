@@ -1,0 +1,25 @@
+## Representing and Displaying Univariate Data
+
+Introduction for Representing and Displaying Univariate Data goes here.
+
+### SubSection
+
+Introduction for subsection.
+
+#### SubSubSection
+
+Introduction for subsubsection.
+
+### Exercises
+
+::: {#exr-data-display-1}
+Do you know?
+
+::: {.callout-note collapse="true" title="Hint"}
+This is a hint.
+:::
+
+::: {.callout-tip collapse="true" title="Answer"}
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+:::
+:::

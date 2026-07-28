@@ -1,0 +1,9 @@
+# Reasoning with Finances
+
+{{< include growth.qmd >}}
+
+{{< include debt.qmd >}}
+
+{{< include investment.qmd >}}
+
+{{< include risk.qmd >}}

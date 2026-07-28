@@ -1,0 +1,9 @@
+# Reasoning with Patterns and Change
+
+{{< include functions.qmd >}}
+
+{{< include comparison.qmd >}}
+
+{{< include features.qmd >}}
+
+{{< include algebra.qmd >}}

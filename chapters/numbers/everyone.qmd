@@ -1,0 +1,91 @@
+## Everyone Can Reason Quantitatively
+
+Introduction for Everyone Can Reason Quantitatively goes here.
+
+### SubSection
+
+Introduction for subsection - see @knuth84 for more details.
+
+[![Caption Text: is this numbered?](images/math-skateboard.jpg){fig-alt="Alt text"}](https://quarto.org)
+
+#### SubSubSection
+
+Introduction for subsubsection.
+
+[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+
+        { some.code }
+    The whole paragraph can be indented, or just the first
+    line.  In this way, multi-paragraph footnotes work like
+    multi-paragraph list items.
+
+This paragraph won't be part of the note, because it
+isn't indented. 
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |
+
+: Varied Dimensions {.striped .hover}
+
+:::{.callout-note}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+> Blockquote {{< lipsum 1 >}}
+
+::: {#fig-cern}
+
+{{< video https://www.youtube.com/embed/wo9vZccmqwc
+    start="116"
+>}}
+
+What is the CERN?
+:::
+
+### Exercises
+
+::: {#exr-numbers-everyone-1}
+Do you know?
+
+::: {.callout-note collapse="true" title="Hint"}
+This is a hint.
+:::
+
+::: {.callout-tip collapse="true" title="Answer"}
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+:::
+:::
+
+### Homework Problems
+
+::: {#exr-hw-1-1}
+## Problem 1
+Solve the initial value problem:
+$$ \frac{dy}{dx} = 3x^2 + 2x, \quad y(0) = 5 $$
+:::
+
+::: {.content-visible when-profile="teacher"}
+::: {.callout-tip title="Solution & Marking Scheme" collapse="false"}
+**Solution:**
+Integrate both sides:
+$$ y(x) = x^3 + x^2 + C $$
+
+Apply initial condition $y(0) = 5$:
+$$ 5 = 0^3 + 0^2 + C \implies C = 5 $$
+
+**Final Answer:** $y(x) = x^3 + x^2 + 5$
+
+* **Grading Note:** Award 1 point for integration, 1 point for applying initial condition correctly.
+:::
+:::

@@ -1,0 +1,25 @@
+## Solving for Missing Information within a Triangle
+
+Introduction for Solving for Missing Information within a Triangle goes here.
+
+### SubSection
+
+Introduction for subsection.
+
+#### SubSubSection
+
+Introduction for subsubsection.
+
+### Exercises
+
+::: {#exr-space-triangle-1}
+Do you know?
+
+::: {.callout-note collapse="true" title="Hint"}
+This is a hint.
+:::
+
+::: {.callout-tip collapse="true" title="Answer"}
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+:::
+:::

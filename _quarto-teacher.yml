@@ -1,0 +1,6 @@
+project:
+  output-dir: _book/teacher
+
+book:
+  title: "Quantitative Reasoning (Teacher Edition)"
+  output-file: "Quantitative_Reasoning_Teacher"

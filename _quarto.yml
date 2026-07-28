@@ -1,0 +1,34 @@
+project:
+  type: book
+  output-dir: _book/html
+
+book:
+  title: "Quantitative Reasoning"
+  subtitle: "A Rigorous Alternative for Algebra 2"
+  author: "Author Name"
+  favicon: "images/favicon-32x32.png"
+  twitter-card: true
+
+  sidebar:
+    logo: "images/DOE-logo.png"
+    collapse-level: 1
+
+  chapters:
+    - index.qmd
+    - chapters/numbers/index.qmd
+    - chapters/space/index.qmd
+    - chapters/data/index.qmd
+    - chapters/patterns/index.qmd
+    - chapters/uncertainty/index.qmd
+    - chapters/finances/index.qmd
+    - references.qmd
+
+number-sections: true
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt

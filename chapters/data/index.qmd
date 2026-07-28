@@ -1,0 +1,11 @@
+# Reasoning with Data
+
+{{< include understanding.qmd >}}
+
+{{< include univariate.qmd >}}
+
+{{< include display.qmd >}}
+
+{{< include bivariate.qmd >}}
+
+{{< include modeling.qmd >}}

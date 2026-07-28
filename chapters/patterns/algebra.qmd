@@ -1,0 +1,25 @@
+## Connecting Algebraic and Graphical Representations
+
+Introduction for Connecting Algebraic and Graphical Representations goes here.
+
+### SubSection
+
+Introduction for subsection.
+
+#### SubSubSection
+
+Introduction for subsubsection.
+
+### Exercises
+
+::: {#exr-patterns-algebra-1}
+Do you know?
+
+::: {.callout-note collapse="true" title="Hint"}
+This is a hint.
+:::
+
+::: {.callout-tip collapse="true" title="Answer"}
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+:::
+:::
