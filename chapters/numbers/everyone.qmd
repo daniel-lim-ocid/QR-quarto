@@ -27,7 +27,24 @@ belong to the previous footnote.
     multi-paragraph list items.
 
 This paragraph won't be part of the note, because it
-isn't indented. 
+isn't indented.
+
+```{python}
+#| label: fig-matplot
+#| fig-cap: "A simple sine wave chart."
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+plt.figure(figsize=(8, 4))
+plt.plot(x, y, color="skyblue", linewidth=2)
+plt.title("Sine Wave")
+plt.grid(True)
+plt.show()
+```
 
 | Right | Left | Default | Center |
 |------:|:-----|---------|:------:|
