@@ -32,17 +32,17 @@ jobs:
 
       - name: Install Python Dependencies
         run: |
-          if [ -f quarto_book/requirements.txt ]; then pip install -r quarto_book/requirements.txt; fi
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      # 1. Point Quarto to render inside the quarto_book folder
+      # Renders the project from the root folder
       - name: Render Quarto Project
-        run: quarto render quarto_book --to html
+        run: quarto render --to html
 
-      # 2. Update the path to target the rendered output inside quarto_book
+      # Points directly to the root-level output directory
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: quarto_book/_book/html   # Adjust if your output-dir in _quarto.yml differs
+          path: _book/html   # Update if your output-dir in _quarto.yml is different (e.g., _site or _book)
 
       - name: Deploy to GitHub Pages
         id: deployment
