@@ -24,25 +24,24 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      # Set up Python without demanding a requirements file
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip'
 
+      # Install Python dependencies only if requirements.txt exists
       - name: Install Python Dependencies
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      # Renders the project from the root folder
       - name: Render Quarto Project
         run: quarto render --to html
 
-      # Points directly to the root-level output directory
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _book/html   # Update if your output-dir in _quarto.yml is different (e.g., _site or _book)
+          path: _book/html   # Make sure this matches output-dir in _quarto.yml
 
       - name: Deploy to GitHub Pages
         id: deployment
