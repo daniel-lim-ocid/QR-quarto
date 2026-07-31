@@ -1,8 +1,5 @@
----
-title: "Quantitative Reasoning"
-subtitle: "A Rigorous Alternative for Algebra 2"
----
-
-# Welcome {.unnumbered}
+# Introduction
 
 Welcome to Quantitative Reasoning!
+
+{{< lipsum 3 >}}

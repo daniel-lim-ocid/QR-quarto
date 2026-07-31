@@ -6,13 +6,17 @@ Introduction for Everyone Can Reason Quantitatively goes here.
 
 Introduction for subsection - see @knuth84 for more details.
 
-[![Caption Text: is this numbered?](images/math-skateboard.jpg){fig-alt="Alt text"}](https://quarto.org)
+::: {#fig-skateboard}
+![](images/math-skateboard.jpg)]{fig-alt="Alt Text"}
+
+Caption Text: is this numbered?
+:::
+
+I can link to a subsequent figure in another chapter here: @fig-skateboard2.
 
 #### SubSubSection
 
-Introduction for subsubsection.
-
-[^1] and another.[^longnote]
+Introduction for subsubsection.[^1] and another.[^longnote]
 
 [^1]: Here is the footnote.
 
@@ -63,11 +67,15 @@ Note that there are five types of callouts, including:
 
 ::: {#fig-cern}
 
-{{< video https://www.youtube.com/embed/wo9vZccmqwc
-    start="116"
->}}
+::: {.content-visible when-format="html"}
+{{< video https://www.youtube.com/embed/wo9vZccmqwc start="116" >}}
+:::
 
-What is the CERN?
+::: {.content-visible when-format="typst"}
+![](images/cern-screenshot.png){fig-alt="CERN image"}
+:::
+
+What is CERN? *Interactive version available at: [https://youtu.be/wo9vZccmqwc](https://youtu.be/wo9vZccmqwc)*
 :::
 
 ### Exercises
@@ -106,3 +114,50 @@ $$ 5 = 0^3 + 0^2 + C \implies C = 5 $$
 * **Grading Note:** Award 1 point for integration, 1 point for applying initial condition correctly.
 :::
 :::
+
+```{=html}
+<!-- Floating GeoGebra Calculator -->
+<button id="ggb-toggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 10000; padding: 10px 15px; background-color: #007bc2; color: white; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.2); font-weight: bold;">
+  🧮 Toggle Calculator
+</button>
+
+<div id="ggb-container" style="display: none; position: fixed; bottom: 70px; right: 20px; z-index: 9999; box-shadow: 0px 10px 30px rgba(0,0,0,0.3); border-radius: 8px; overflow: hidden; background: white; border: 1px solid #ccc;">
+  <div id="ggb-element"></div>
+</div>
+
+<!-- Updated official CDN link -->
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+<script>
+  let isAppletInjected = false;
+
+  const toggleBtn = document.getElementById('ggb-toggle');
+  const container = document.getElementById('ggb-container');
+
+  toggleBtn.addEventListener('click', function() {
+    // 1. Toggle visibility
+    if (container.style.display === 'none' || container.style.display === '') {
+      container.style.display = 'block';
+
+      // 2. Inject GeoGebra ONLY after the container is visible
+      if (!isAppletInjected) {
+        var parameters = {
+          "appName": "graphing",
+          "width": 400,
+          "height": 500,
+          "showToolBar": true,
+          "showAlgebraInput": true,
+          "showMenuBar": false,
+          "enableRightClick": false,
+          "enableShiftDragZoom": true
+        };
+        
+        var applet = new GGBApplet(parameters, true);
+        applet.inject('ggb-element');
+        isAppletInjected = true;
+      }
+    } else {
+      container.style.display = 'none';
+    }
+  });
+</script>

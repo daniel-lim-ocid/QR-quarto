@@ -1,5 +1,22 @@
 # Reasoning With Numbers
 
+```{=typst}
+#v(1em)
+#place(
+  top + left,
+  dx: -1.25in,
+  dy: 1.2in,
+  image(
+    "images/banner1.jpg",
+    width: 100% + 2.5in,
+    height: 3.5in,
+    fit: "cover"
+  )
+)
+
+#pagebreak()
+```
+
 {{< include everyone.qmd >}}
 
 {{< include quantities.qmd >}}

@@ -1,10 +1,11 @@
 project:
   type: book
+  output-dir: _book/html
 
 book:
   title: "Quantitative Reasoning"
   subtitle: "A Rigorous Alternative for Algebra 2"
-  author: "Hawaii QR Workgroup"
+  author: "Author Name"
   favicon: "images/favicon-32x32.png"
   twitter-card: true
 
@@ -22,21 +23,12 @@ book:
     - chapters/finances/index.qmd
     - references.qmd
 
-crossref:
-  fig-prefix: "Figure"
-  chapters: true  # <--- Forces Chapter.Figure numbering (e.g., 2.1, 2.2) in PDF/Typst
+number-sections: true
 
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
-  typst:
-    toc: true
-    citeproc: true
-    number-sections: true
-    number-depth: 3
-    section-numbering: "1.1"
-    template-partials:
-      - style/typst-template.typ
-      - style/typst-show.typ
+  pdf:
+    documentclass: scrreprt

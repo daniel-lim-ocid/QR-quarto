@@ -2,6 +2,12 @@
 
 Introduction for Measuring the Unmeasurable goes here.
 
+::: {#fig-skateboard2}
+![](images/math-skateboard.jpg)]{fig-alt="Alt Text"}
+
+Caption Text: is this numbered?
+:::
+
 ### SubSection
 
 Introduction for subsection.
